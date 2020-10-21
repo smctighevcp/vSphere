@@ -31,7 +31,6 @@ function Set-ESXiHostAdminGroup {
         [string]$Group,
         [Parameter(Mandatory=$true)]
         [validateSet('all', 'single')] [String]$Target,
-        [Parameter(Mandatory=$true)]
         [string]$Entity
     )
 
