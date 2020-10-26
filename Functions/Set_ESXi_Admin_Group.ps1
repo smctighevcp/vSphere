@@ -21,8 +21,8 @@ function Set-ESXiHostAdminGroup {
     .LINK
         GitHub
     .EXAMPLE
-        PS C:\> Set-ESXiHostAdminGroup -Scope all -Group "DomainName\admin_group"
-        PS C:\> Set-ESXiHostAdminGroup -Scope single -Entity esxi01 -Group "ESXi_admin_group"
+        PS C:\> Set-ESXiHostAdminGroup -Target all -Group "DomainName\admin_group"
+        PS C:\> Set-ESXiHostAdminGroup -Target single -Entity esxi01 -Group "ESXi_admin_group"
     #>
 
     [CmdletBinding()]
