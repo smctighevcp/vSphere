@@ -5,9 +5,7 @@ function Set-ESXiHostAdminGroup {
     .DESCRIPTION
         Sets the ESXi host administrators group on a  via PowerCLI.
     .PARAMETER Group
-        The Active Directory or Local ESXi Group name 
-        Example - ActiveDirectory = <Domain Name>\<GroupName>
-        Example - Local ESXi Group = <Group Name>
+        The Active Directory Group name 
     .PARAMETER Target
         all = All connected hosts from current session.
         single = A singular host that needs to be specifed with the 'Entity' paramater.
@@ -21,8 +19,8 @@ function Set-ESXiHostAdminGroup {
     .LINK
         GitHub
     .EXAMPLE
-        PS C:\> Set-ESXiHostAdminGroup -Target all -Group "DomainName\admin_group"
-        PS C:\> Set-ESXiHostAdminGroup -Target single -Entity esxi01 -Group "ESXi_admin_group"
+        PS C:\> Set-ESXiHostAdminGroup -Target all -Group "admin_group"
+        PS C:\> Set-ESXiHostAdminGroup -Target single -Entity esxi01 -Group "admin_group"
     #>
 
     [CmdletBinding()]
