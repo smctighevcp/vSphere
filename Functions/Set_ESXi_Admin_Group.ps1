@@ -9,7 +9,7 @@ function Set-ESXiHostAdminGroup {
     .PARAMETER Target
         all = All connected hosts from current session.
         single = A singular host that needs to be specifed with the 'Entity' paramater.
-.PARAMETER Entity
+    .PARAMETER Entity
         The ESXi Host Name you wish to target.
         Requires the -Scope paramater to be set to 'single' 
     .NOTES
