@@ -6,7 +6,7 @@
         Requires PowerCLI.
         Can be used directly or via a scheduled job.
     .NOTES
-        Tags: VMware, ESXi, HostAdminGroup, PowerCLI
+        Tags: VMware, vCenter, ESXi, Permissions, PowerCLI, Tags
         Author: Stephan McTighe
         Website: stephanmctighe.com
     #>
