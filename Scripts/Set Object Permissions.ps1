@@ -14,7 +14,9 @@
 #Load PowerCLI Modules
 Import-module VMware.PowerCLI
 
+#Used to create the VICredential for the first time
 #New-VICredentialStoreItem -host "vcsa01.lab.local" -user "administrator@vsphere.local" -password "**********" -file C:\Users\administrator
+
 #Get the Credentials
 $creds = Get-VICredentialStoreItem -file  C:\Users\Peppa\OneDrive\Documents\Lab\smt-lab-vcsa-01.creds
  
