@@ -45,7 +45,7 @@ function Get-vCenterAPISessionID {
             $SessionID = [pscustomobject]@{
                 SessionID = $Session.value
             }
-            $SessionID
+            Write-Output $SessionID
         } catch {
             Write-Host "An error occurred!" -ForegroundColor Red
             if ($_.ErrorDetails -like "*Authentication required*") {
