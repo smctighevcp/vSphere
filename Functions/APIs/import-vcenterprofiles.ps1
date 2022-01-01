@@ -36,13 +36,13 @@ function Import-vCenterProfiles {
             "vmware-api-session-id" = "$($SessionID)"
             "Content-type"          = "application/json"
         }
-        $body = Convertto-json @{
+        $body = @{
             'config_spec' = Get-Content "$($jsonPath)\vcenter-profile-export.json"
         }
     }
     Process {
         try {
-            $Import = Invoke-RestMethod -Method POST -Uri "https://$($vCenterFQDN)/api/appliance/infraprofile/configs?action=import&vmw-task=true" -Headers $SessionHeaders -Body $body
+            $Import = Invoke-RestMethod -Method POST -Uri "https://$($vCenterFQDN)/api/appliance/infraprofile/configs?action=import&vmw-task=true" -Headers $SessionHeaders -Body (Convertto-json $body)
             $Import
         } catch {
             Write-Host "An error occurred!" -ForegroundColor Red
