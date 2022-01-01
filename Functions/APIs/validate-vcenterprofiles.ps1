@@ -28,7 +28,7 @@ function Validate-vCenterProfiles {
         [Parameter(Mandatory)]
         [string] $vCenterFQDN,
         [Parameter(Mandatory)]
-        [string] $ExportPath
+        [string] $jsonPath
 
     )
     Begin {
@@ -37,7 +37,7 @@ function Validate-vCenterProfiles {
             "Content-type"          = "application/json"
         }
         $body = Convertto-json @{
-            'config_spec' = Get-Content "$($ExportPath)\vcenter-profile-export.json"
+            'config_spec' = Get-Content "$($jsonPath)\vcenter-profile-export.json"
         }
     }
     Process {
@@ -46,11 +46,7 @@ function Validate-vCenterProfiles {
             $validate
         } catch {
             Write-Host "An error occurred!" -ForegroundColor Red
-            if ($_.ErrorDetails -like "*Authentication required*") {
-                Write-Host "Possible authentication issue, check username and password ... " -ForegroundColor Blue
-            }
-            Write-Host "Full error ... " -ForegroundColor Blue
-            Write-Host $_.ErrorDetails -ForegroundColor Red
+            Write-Host $_ -ForegroundColor Red
         }
     }
 }
