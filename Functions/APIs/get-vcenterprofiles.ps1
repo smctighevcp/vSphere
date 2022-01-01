@@ -7,7 +7,7 @@ function Get-vCenterProfiles {
     .PARAMETER vCenterFQDN
         The vCenter Server FQDN.
     .PARAMETER SessionID
-        Username for the vCenter Server with the required privelges.
+        SesionID to authenticate with the vCenter Server.
     .NOTES
         Tags: VMware, vCenter, Profiles, PowerCLI, API
         Author: Stephan McTighe
