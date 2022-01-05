@@ -22,8 +22,7 @@ function Import-vCenterProfiles {
     #>
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory,
-            ValueFromPipeline)]
+        [Parameter(Mandatory)]
         [string] $SessionID,
         [Parameter(Mandatory)]
         [string] $vCenterFQDN,
