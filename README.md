@@ -1,6 +1,11 @@
-# <img src="https://github.com/smctighevcp/vSphere/blob/master/vSphere-Icon-Color-2020-300x216.png" style="width:60px;height:50px;"> VMware vSphere (not just vSphere...)
+<img src="https://user-images.githubusercontent.com/65562694/165374182-8eade55c-85be-4efa-a59f-f6d814770670.png" style="width:150px;height:150px;">
 
-This repository contains various VMware related PowerShell code snippets, useful functions and scripts.
+
+# VMware vSphere (not just vSphere...)
+
+## Introduction
+
+This repository contains various VMware related PowerShell code snippets, useful functions and scripts:
 
 * Scripts
 * Code Snippets
