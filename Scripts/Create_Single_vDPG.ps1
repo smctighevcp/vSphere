@@ -18,7 +18,7 @@ $UnusedUP = "Uplink 3" #Modify as required
 Connect-VIServer $vCenter -Credential (Get-Credential) -force
 
 #Create Distributed Virtual Port Group.
-Get-VDSwitch -Name $vDSName | New-VDPortGroup -Name $VDPG -VLanId $VLAN -NumPorts 8
+Get-VDSwitch -Name $vDSName | New-VDPortGroup -Name $VDPG -VLanId $VLAN -NumPorts $Ports
 
 #Set Load Balancing option
 Get-VDswitch -Name $vDSName | Get-VDPortgroup $VDPG | Get-VDUplinkTeamingPolicy | Set-VDUplinkTeamingPolicy -LoadBalancingPolicy $LoadBalancing -ActiveUplinkPort $ActiveUP -StandbyUplinkPort $StandUp -UnusedUplinkPort $UnusedUP
